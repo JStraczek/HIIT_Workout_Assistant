@@ -74,7 +74,7 @@ public class Setup extends AppCompatActivity implements View.OnClickListener {
         cooldownButton_decrease.setOnClickListener(this);
 
         //loading saved prefs (or not if there are none :))
-        loadData();
+        load_previous_settings();
     }
 
     @Override
@@ -85,7 +85,7 @@ public class Setup extends AppCompatActivity implements View.OnClickListener {
                 try{ // try for checking if there are empty spaces
                     timers = setTimers(); // gets user input and packs it into a bundle
                     if (checkInputs()) { // checking if inputs are valid
-                        saveData();
+                        saveSettings();
                         startWorkout(timers); // passes bundle of timers to the next activity and starts workout
                     } else {
                         Toast.makeText(getApplicationContext(), "Values can't be 0", Toast.LENGTH_LONG).show();
@@ -192,7 +192,7 @@ public class Setup extends AppCompatActivity implements View.OnClickListener {
         cooldownInput.setText("0");
     }
 
-    public void saveData(){
+    public void saveSettings(){
         SharedPreferences previousSettings = getSharedPreferences(PREVIOUS_SETTINGS, MODE_PRIVATE);
         SharedPreferences.Editor editor = previousSettings.edit();
 
@@ -207,7 +207,7 @@ public class Setup extends AppCompatActivity implements View.OnClickListener {
         Toast.makeText(this, R.string.settings_saved, Toast.LENGTH_SHORT).show();
     }
 
-    public void loadData(){
+    public void load_previous_settings(){
         SharedPreferences previousSettings = getSharedPreferences(PREVIOUS_SETTINGS, MODE_PRIVATE);
         roundsInput.setText(previousSettings.getString("Rounds", "0"));
         warmupInput.setText(previousSettings.getString("Warmup", "0"));
