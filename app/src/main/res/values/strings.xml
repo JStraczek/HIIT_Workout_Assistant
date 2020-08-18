@@ -20,8 +20,7 @@
     <string name="increaseByfive">+5</string>
     <string name="decreaseBy30">-30</string>
     <string name="increaseBy30">+30</string>
-    <string name="dm_disable">Disable dark mode</string>
-    <string name="dm_enable">Enable dark mode</string>
+    <string name="dm_status">Enable dark mode</string>
     <string name="plus">+</string>
     <string name="minus">-</string>
     <string name="reset_all">Reset all</string>

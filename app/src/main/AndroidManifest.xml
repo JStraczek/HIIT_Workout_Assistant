@@ -16,6 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Workout" />
         <activity android:name=".Setup" />
         <activity android:name=".Menu">
             <intent-filter>

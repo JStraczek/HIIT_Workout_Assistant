@@ -29,7 +29,7 @@
         android:background="@color/darkmode_button"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        android:text="Enable dark mode"
+        android:text="@string/dm_status"
         android:textColor="@color/darkmode_btn_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

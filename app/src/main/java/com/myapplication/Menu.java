@@ -22,6 +22,7 @@ public class Menu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        this.getSupportActionBar().hide();
 
         startButton = findViewById(R.id.startButton);
         startButton.setOnClickListener(new View.OnClickListener() {
@@ -39,14 +40,12 @@ public class Menu extends AppCompatActivity {
                 SharedPreferences.Editor editor = darkmodeStatus.edit();
                 if (!darkmodeON){
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                    darkmodeButton.setText(R.string.dm_disable);
                     darkmodeON = true;
                     editor.putBoolean("darkmode_status", darkmodeON);
 
                     Toast.makeText(getApplicationContext(), "Dark mode enabled", Toast.LENGTH_SHORT).show();
                 }else{
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                    darkmodeButton.setText(R.string.dm_enable);
                     darkmodeON = false;
                     editor.putBoolean("darkmode_status", darkmodeON);
 
@@ -62,7 +61,7 @@ public class Menu extends AppCompatActivity {
         darkmodeON = darkmodeStatus.getBoolean("darkmode_status", false);
         if(darkmodeON){
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-            darkmodeButton.setText(R.string.dm_disable);
+            darkmodeButton.setText(R.string.dm_status);
         }
 
     }

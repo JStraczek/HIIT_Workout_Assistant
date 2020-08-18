@@ -47,7 +47,7 @@
         android:layout_marginStart="240dp"
         android:layout_marginTop="396dp"
         android:text="@string/decreaseBy30"
-        android:textSize="13.5sp"
+        android:textSize="13sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -125,7 +125,7 @@
         android:layout_marginStart="240dp"
         android:layout_marginTop="172dp"
         android:text="@string/decreaseBy30"
-        android:textSize="13.5sp"
+        android:textSize="13sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -148,7 +148,7 @@
         android:layout_marginStart="300dp"
         android:layout_marginTop="396dp"
         android:text="@string/increaseBy30"
-        android:textSize="13.5sp"
+        android:textSize="13sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -241,7 +241,7 @@
         android:layout_marginStart="300dp"
         android:layout_marginTop="172dp"
         android:text="@string/increaseBy30"
-        android:textSize="13.5sp"
+        android:textSize="13sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -37,6 +37,7 @@ public class Setup extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setup);
+        this.getSupportActionBar().hide();
 
         // Initializing inputs
         roundsInput = findViewById(R.id.roundsInput);
@@ -82,17 +83,18 @@ public class Setup extends AppCompatActivity implements View.OnClickListener {
         switch (v.getId()) {
 
             case R.id.setButton:
+
                 try{ // try for checking if there are empty spaces
                     timers = setTimers(); // gets user input and packs it into a bundle
                     if (checkInputs()) { // checking if inputs are valid
                         saveSettings();
                         startWorkout(timers); // passes bundle of timers to the next activity and starts workout
                     } else {
-                        Toast.makeText(getApplicationContext(), "Values can't be 0", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Values can't be 0", Toast.LENGTH_SHORT).show();
                     }
                 }
                 catch(Exception e) {
-                    Toast.makeText(getApplicationContext(), "Fill in the blank spaces", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Fill in the blank spaces", Toast.LENGTH_SHORT).show();
                 }
                 break;
 
@@ -217,6 +219,6 @@ public class Setup extends AppCompatActivity implements View.OnClickListener {
 
         if (!roundsInput.getText().toString().equals("0")){
             Toast.makeText(this, R.string.settings_loaded, Toast.LENGTH_SHORT).show();
-        };
+        }
     }
 }
