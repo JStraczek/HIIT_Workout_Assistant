@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">HIIT Workout Assistant</string>
+    <string name="tapme">Tap me to start!</string>
+    <string name="set">Set and Go</string>
+    <string name="_1">+1</string>
+    <string name="excercise">Exercise</string>
+    <string name="pause">Pause</string>
+    <string name="start">Start</string>
+    <string name="warmup">Warmup</string>
+    <string name="rest">Rest</string>
+    <string name="cooldown">Cooldown</string>
+    <string name="finished">Workout completed</string>
+    <string name="roundsAmount">Rounds Amount:</string>
+    <string name="warmupDuration">Warmup duration:</string>
+    <string name="intervalDuration">Interval duration:</string>
+    <string name="restDuration">Rest duration:</string>
+    <string name="cooldownDuration">Cooldown duration:</string>
+    <string name="setupLabel">Input your workout settings</string>
+    <string name="decreaseByfive">-5S</string>
+    <string name="increaseByfive">+5s</string>
+    <string name="decreaseBy30">-30s</string>
+    <string name="increaseBy30">+30s</string>
+</resources>
