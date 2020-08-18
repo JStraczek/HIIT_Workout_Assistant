@@ -2,5 +2,6 @@
 <resources>
     <dimen name="setupLabel_width">150dp</dimen>
     <dimen name="setupLabel_height">25</dimen>
-    <dimen name="setupButton_dim">55dp</dimen>
+    <dimen name="setupButton_height">48dp</dimen>
+    <dimen name="setupButton_width">48dp</dimen>
 </resources>

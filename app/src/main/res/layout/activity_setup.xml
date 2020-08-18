@@ -9,333 +9,326 @@
     tools:context=".Setup">
 
     <TextView
-        android:id="@+id/restInLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:layout_marginBottom="47dp"
-        android:text="@string/restDuration"
-        android:textColor="@color/text"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/restInput"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.122"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/intervalInput"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <EditText
-        android:id="@+id/intervalInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-1dp"
-        android:ems="10"
-
-        android:inputType="number"
-        android:textAlignment="center"
-        android:textColor="@color/text"
-        android:textColorHint="@color/text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.196"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.425" />
-
-    <Button
-        android:id="@+id/setButton"
-        android:layout_width="156dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="192dp"
-        android:layout_marginTop="544dp"
-        android:background="@color/button"
-        android:text="Set &amp; go"
-        android:textColor="@color/text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/warmupInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        android:textAlignment="center"
-        android:textColor="@color/text"
-        android:textColorHint="@color/text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.194"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/roundsInput"
-        app:layout_constraintVertical_bias="0.067" />
-
-    <EditText
-        android:id="@+id/restInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        android:textAlignment="center"
-        android:textColor="@color/text"
-        android:textColorHint="@color/text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.196"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.549" />
-
-    <EditText
-        android:id="@+id/cooldownInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        android:textAlignment="center"
-        android:textColor="@color/text"
-        android:textColorHint="@color/text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.194"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/restInput"
-        app:layout_constraintVertical_bias="0.128" />
-
-    <TextView
         android:id="@+id/textView"
-        android:layout_width="376dp"
-        android:layout_height="25dp"
+        android:layout_width="338dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="16dp"
         android:lineSpacingExtra="8sp"
         android:text="@string/setupLabel"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/text"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         android:typeface="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.062" />
-
-    <EditText
-        android:id="@+id/roundsInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        android:textAlignment="center"
-        android:textColor="@color/text"
-        android:textColorHint="@color/text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.194"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.176" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/roundsInLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
-        android:layout_marginBottom="3dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="76dp"
         android:padding="1sp"
         android:text="@string/roundsAmount"
         android:textAlignment="textStart"
         android:textColor="@color/text"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/roundsInput"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.134"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/cooldownButton_decrease"
+        android:layout_width="@dimen/setupButton_width"
+        android:layout_height="@dimen/setupButton_height"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="396dp"
+        android:text="@string/decreaseBy30"
+        android:textSize="13.5sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/roundsButton_decrease"
+        android:layout_width="@dimen/setupButton_width"
+        android:layout_height="@dimen/setupButton_height"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="96dp"
+        android:fontFamily="sans-serif-black"
+        android:padding="-10dp"
+        android:text="@string/minus"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/warmupInLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="152dp"
         android:text="@string/warmupDuration"
         android:textColor="@color/text"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/warmupInput"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/roundsInput"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/cooldownInput"
+        android:layout_width="201dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="400dp"
+        android:ems="10"
+        android:hint="0"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:paddingTop="2dp"
+        android:textAlignment="center"
+        android:textColor="@color/text"
+        android:textColorHint="@color/text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/warmupInput"
+        android:layout_width="200dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="176dp"
+        android:ems="10"
+        android:hint="0"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:paddingTop="2dp"
+        android:textAlignment="center"
+        android:textColor="@color/text"
+        android:textColorHint="@color/text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/restButton_increase"
+        android:layout_width="@dimen/setupButton_width"
+        android:layout_height="@dimen/setupButton_height"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="320dp"
+        android:text="@string/increaseByfive"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/warmupButton_decrease"
+        android:layout_width="@dimen/setupButton_width"
+        android:layout_height="@dimen/setupButton_height"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="172dp"
+        android:text="@string/decreaseBy30"
+        android:textSize="13.5sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/intervalInLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="228dp"
         android:text="@string/intervalDuration"
         android:textColor="@color/text"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/warmupInput"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/cooldownButton_increase"
+        android:layout_width="@dimen/setupButton_width"
+        android:layout_height="@dimen/setupButton_height"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="396dp"
+        android:text="@string/increaseBy30"
+        android:textSize="13.5sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/setButton"
+        android:layout_width="135dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="460dp"
+        android:background="@color/button"
+        android:text="@string/set_and_go"
+        android:textColor="@color/text"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="81dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="460dp"
+        android:background="@color/button"
+        android:lineSpacingExtra="8sp"
+        android:text="@string/reset_all"
+        android:textColor="@color/text"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/restInLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="300dp"
+        android:text="@string/restDuration"
+        android:textColor="@color/text"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/restInput"
+        android:layout_width="201dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="324dp"
+        android:ems="10"
+        android:hint="0"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:paddingTop="2dp"
+        android:textAlignment="center"
+        android:textColor="@color/text"
+        android:textColorHint="@color/text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/intervalButton_increase"
+        android:layout_width="@dimen/setupButton_width"
+        android:layout_height="@dimen/setupButton_height"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="248dp"
+        android:text="@string/increaseByfive"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/intervalInput"
+        android:layout_width="200dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="16dp"
+
+        android:layout_marginTop="252dp"
+        android:ems="10"
+        android:hint="0"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:paddingTop="2dp"
+        android:textAlignment="center"
+        android:textColor="@color/text"
+        android:textColorHint="@color/text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/warmupButton_increase"
+        android:layout_width="@dimen/setupButton_width"
+        android:layout_height="@dimen/setupButton_height"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="172dp"
+        android:text="@string/increaseBy30"
+        android:textSize="13.5sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/intervalButton_decrease"
+        android:layout_width="@dimen/setupButton_width"
+        android:layout_height="@dimen/setupButton_height"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="248dp"
+        android:text="@string/decreaseByfive"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/restButton_decrease"
+        android:layout_width="@dimen/setupButton_width"
+        android:layout_height="@dimen/setupButton_height"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="320dp"
+        android:text="@string/decreaseByfive"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/roundsInput"
+        android:layout_width="200dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:hint="0"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:paddingTop="2dp"
+        android:textAlignment="center"
+        android:textColor="@color/text"
+        android:textColorHint="@color/text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/roundsButton_increase"
+        android:layout_width="@dimen/setupButton_width"
+        android:layout_height="@dimen/setupButton_height"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="96dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/plus"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/cooldownInLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="376dp"
         android:text="@string/cooldownDuration"
         android:textColor="@color/text"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/cooldownInput"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/restInput"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
-        android:id="@+id/roundsButton_decrease"
-        android:layout_width="@dimen/setupButton_dim"
-        android:layout_height="@dimen/setupButton_dim"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="117dp"
-        android:layout_marginEnd="17dp"
-        android:fontFamily="sans-serif-black"
-        android:text="-"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/roundsButton_increase"
-        app:layout_constraintStart_toEndOf="@+id/roundsInput"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/cooldownButton_decrease"
-        android:layout_width="@dimen/setupButton_dim"
-        android:layout_height="@dimen/setupButton_dim"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="17dp"
-        android:text="@string/decreaseBy30"
-        android:textSize="13.5sp"
-        app:layout_constraintEnd_toStartOf="@+id/cooldownButton_increase"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/cooldownInput"
-        app:layout_constraintTop_toBottomOf="@+id/restButton_decrease" />
-
-    <Button
-        android:id="@+id/restButton_increase"
-        android:layout_width="@dimen/setupButton_dim"
-        android:layout_height="@dimen/setupButton_dim"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/increaseByfive"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/intervalButton_increase" />
-
-    <Button
-        android:id="@+id/intervalButton_decrease"
-        android:layout_width="@dimen/setupButton_dim"
-        android:layout_height="@dimen/setupButton_dim"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="17dp"
-        android:text="@string/decreaseByfive"
-        app:layout_constraintEnd_toStartOf="@+id/intervalButton_increase"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/intervalInput"
-        app:layout_constraintTop_toBottomOf="@+id/warmupButton_decrease" />
-
-    <Button
-        android:id="@+id/restButton_decrease"
-        android:layout_width="@dimen/setupButton_dim"
-        android:layout_height="@dimen/setupButton_dim"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="17dp"
-        android:text="@string/decreaseByfive"
-        app:layout_constraintEnd_toStartOf="@+id/restButton_increase"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/restInput"
-        app:layout_constraintTop_toBottomOf="@+id/intervalButton_decrease" />
-
-    <Button
-        android:id="@+id/roundsButton_increase"
-        android:layout_width="@dimen/setupButton_dim"
-        android:layout_height="@dimen/setupButton_dim"
-        android:layout_marginTop="117dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="sans-serif-black"
-        android:text="+"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/roundsButton_decrease"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/intervalButton_increase"
-        android:layout_width="@dimen/setupButton_dim"
-        android:layout_height="@dimen/setupButton_dim"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/increaseByfive"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/warmupButton_increase" />
-
-    <Button
-        android:id="@+id/warmupButton_decrease"
-        android:layout_width="@dimen/setupButton_dim"
-        android:layout_height="@dimen/setupButton_dim"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="17dp"
-        android:text="@string/decreaseBy30"
-        android:textSize="13.5sp"
-        app:layout_constraintEnd_toStartOf="@+id/warmupButton_increase"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/warmupInput"
-        app:layout_constraintTop_toBottomOf="@+id/roundsButton_decrease" />
-
-    <Button
-        android:id="@+id/cooldownButton_increase"
-        android:layout_width="@dimen/setupButton_dim"
-        android:layout_height="@dimen/setupButton_dim"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/increaseBy30"
-        android:textSize="13.5sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/restButton_increase" />
-
-    <Button
-        android:id="@+id/warmupButton_increase"
-        android:layout_width="@dimen/setupButton_dim"
-        android:layout_height="@dimen/setupButton_dim"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/increaseBy30"
-        android:textSize="13.5sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/roundsButton_increase" />
-
-    <Button
-        android:id="@+id/resetButton"
-        android:layout_width="85dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="544dp"
-        android:background="@color/button"
-        android:lineSpacingExtra="8sp"
-        android:text=" Reset all"
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="140dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="44dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="@string/in_seconds"
+        android:textAlignment="center"
         android:textColor="@color/text"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,10 +10,6 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.lang.reflect.Array;
-import java.util.Arrays;
 
 public class Workout extends AppCompatActivity {
     private TextView stageLabel;
@@ -114,7 +110,7 @@ public class Workout extends AppCompatActivity {
 
         public long getNewSetting(){
             if (currentRound % 2 != 0) {
-                stageLabel.setText(R.string.excercise);
+                stageLabel.setText(R.string.exercise);
                 return interval;
             } else {
                 stageLabel.setText(R.string.rest);

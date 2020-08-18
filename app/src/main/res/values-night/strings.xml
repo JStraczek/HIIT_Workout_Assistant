@@ -3,7 +3,7 @@
     <string name="tapme">Tap me to start!</string>
     <string name="set">Set and Go</string>
     <string name="_1">+1</string>
-    <string name="excercise">Exercise</string>
+    <string name="exercise">Exercise</string>
     <string name="pause">Pause</string>
     <string name="start">Start</string>
     <string name="warmup">Warmup</string>
@@ -16,8 +16,17 @@
     <string name="restDuration">Rest duration:</string>
     <string name="cooldownDuration">Cooldown duration:</string>
     <string name="setupLabel">Input your workout settings</string>
-    <string name="decreaseByfive">-5S</string>
-    <string name="increaseByfive">+5s</string>
-    <string name="decreaseBy30">-30s</string>
-    <string name="increaseBy30">+30s</string>
+    <string name="decreaseByfive">-5</string>
+    <string name="increaseByfive">+5</string>
+    <string name="decreaseBy30">-30</string>
+    <string name="increaseBy30">+30</string>
+    <string name="dm_disable">Disable dark mode</string>
+    <string name="dm_enable">Enable dark mode</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="reset_all">Reset all</string>
+    <string name="set_and_go"><![CDATA[Set & go]]></string>
+    <string name="in_seconds">(use seconds!)</string>
+    <string name="settings_saved">Settings saved</string>
+    <string name="settings_loaded">Previous settings loaded</string>
 </resources>

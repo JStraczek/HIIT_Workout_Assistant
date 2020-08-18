@@ -204,7 +204,7 @@ public class Setup extends AppCompatActivity implements View.OnClickListener {
 
         editor.apply();
 
-        Toast.makeText(this, "Prefs saved", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.settings_saved, Toast.LENGTH_SHORT).show();
     }
 
     public void loadData(){
@@ -215,8 +215,8 @@ public class Setup extends AppCompatActivity implements View.OnClickListener {
         restInput.setText(previousSettings.getString("Rest", "0"));
         cooldownInput.setText(previousSettings.getString("Cooldown", "0"));
 
-        if (roundsInput.getText().toString() != "0"){
-            Toast.makeText(this, "Previous settings loaded", Toast.LENGTH_SHORT).show();
+        if (!roundsInput.getText().toString().equals("0")){
+            Toast.makeText(this, R.string.settings_loaded, Toast.LENGTH_SHORT).show();
         };
     }
 }
