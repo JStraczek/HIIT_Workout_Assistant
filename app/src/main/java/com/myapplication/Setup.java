@@ -153,9 +153,9 @@ public class Setup extends AppCompatActivity implements View.OnClickListener {
         Bundle bundle = new Bundle();
         rounds =  Long.parseLong(roundsInput.getText().toString());
         warmupDur = Long.parseLong(warmupInput.getText().toString());
-        intervalDur = Long.parseLong(intervalInput.getText().toString());
-        restDur = Long.parseLong(restInput.getText().toString());
-        cooldownDur = Long.parseLong(cooldownInput.getText().toString());
+        intervalDur = Long.parseLong(intervalInput.getText().toString()) + 1;
+        restDur = Long.parseLong(restInput.getText().toString()) + 1;
+        cooldownDur = Long.parseLong(cooldownInput.getText().toString()) + 1;
 
         long[] timers = {rounds, warmupDur, intervalDur, restDur, cooldownDur};
         bundle.putLongArray("timers", timers);

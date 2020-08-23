@@ -10,8 +10,8 @@
 
     <Button
         android:id="@+id/startButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="84dp"
+        android:layout_height="41dp"
         android:background="@color/button"
         android:text="Start"
         android:textColor="@color/text"
@@ -26,8 +26,8 @@
 
     <TextView
         android:id="@+id/countdownText"
-        android:layout_width="351dp"
-        android:layout_height="110dp"
+        android:layout_width="300dp"
+        android:layout_height="88dp"
 
         android:textAlignment="center"
         android:textColor="@color/text"
@@ -42,8 +42,8 @@
     <ProgressBar
         android:id="@+id/progressBar"
         style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
-        android:layout_width="225dp"
-        android:layout_height="36dp"
+        android:layout_width="212dp"
+        android:layout_height="26dp"
         android:clickable="false"
         android:indeterminate="false"
         android:progressTint="#B51212"
@@ -55,21 +55,22 @@
 
     <TextView
         android:id="@+id/stageLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="88dp"
         android:shadowColor="#44557E"
         android:shadowDx="0.0"
         android:shadowDy="0.0"
         android:shadowRadius="8"
-        android:singleLine="true"
+        android:singleLine="false"
         android:text="Start workout"
         android:textAlignment="center"
         android:textColor="#4789ED"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.129" />
+        app:layout_constraintVertical_bias="0.151" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
