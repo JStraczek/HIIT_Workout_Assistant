@@ -3,6 +3,7 @@ package com.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -29,6 +30,8 @@ public class Workout extends AppCompatActivity {
     private int currentRound = 0;
     private boolean isRunning = false;
 
+    MediaPlayer countdownSound;
+
     //private CountDownTimer countDownTimer;
     private long timeLeft;
 
@@ -38,6 +41,8 @@ public class Workout extends AppCompatActivity {
         setContentView(R.layout.activity_workout);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         this.getSupportActionBar().hide();
+
+        countdownSound = MediaPlayer.create(getApplicationContext(), R.raw.countdown);
 
         getSetup();
 
@@ -84,6 +89,9 @@ public class Workout extends AppCompatActivity {
                 public void onTick(long l) {
                     timeLeft = l;
                     updateTimer();
+                    if((int) timeLeft/1000 == 3){
+                        play_countdown_sound(); // play sound for the last 3 seconds
+                    }
                 }
 
                 @Override
@@ -132,7 +140,6 @@ public class Workout extends AppCompatActivity {
             timeLeftText += ":";
             if(seconds < 10) timeLeftText += "0";
             timeLeftText += seconds;
-
             countdownText.setText(timeLeftText);
         }
 
@@ -148,6 +155,10 @@ public class Workout extends AppCompatActivity {
             }else{
                 startTimer(timeLeft);
             }
+        }
+
+        public void play_countdown_sound(){
+            countdownSound.start();
         }
     }
 

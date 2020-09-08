@@ -10,9 +10,10 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="338dp"
-        android:layout_height="28dp"
+        android:layout_width="401dp"
+        android:layout_height="29dp"
         android:lineSpacingExtra="8sp"
+        android:singleLine="true"
         android:text="@string/setupLabel"
         android:textAlignment="center"
         android:textAllCaps="true"
@@ -355,11 +356,12 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="140dp"
-        android:layout_height="26dp"
+        android:layout_width="375dp"
+        android:layout_height="27dp"
         android:layout_marginTop="44dp"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
+        android:singleLine="true"
         android:text="@string/in_seconds"
         android:textAlignment="center"
         android:textColor="@color/text"
