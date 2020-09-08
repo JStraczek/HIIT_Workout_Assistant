@@ -64,6 +64,13 @@ public class Workout extends AppCompatActivity {
         updateTimer();
     }
 
+    @Override
+    public void onBackPressed(){
+        countdownSound.stop();
+        countdownTimer.cancel();
+        super.onBackPressed();
+    }
+
         public void getSetup(){
             Intent in = getIntent();
             Bundle b = in.getExtras();
@@ -89,7 +96,7 @@ public class Workout extends AppCompatActivity {
                 public void onTick(long l) {
                     timeLeft = l;
                     updateTimer();
-                    if((int) timeLeft/1000 == 3){
+                    if(countdownText.getText().toString().equals("0:03")){
                         play_countdown_sound(); // play sound for the last 3 seconds
                     }
                 }
@@ -111,6 +118,7 @@ public class Workout extends AppCompatActivity {
                         getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
                         currentRound = 0;
                     }
+                    this.cancel();
                 }
             }.start();
             isRunning = true;

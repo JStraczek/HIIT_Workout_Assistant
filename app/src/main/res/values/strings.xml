@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HIIT Workout Assistant</string>
+    <string name="app_name">Interval Workout Assistant</string>
     <string name="tapme">Tap me to start!</string>
     <string name="set">Set and Go</string>
     <string name="_1">+1</string>
