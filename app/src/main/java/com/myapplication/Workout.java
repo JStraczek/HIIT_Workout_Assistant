@@ -2,6 +2,7 @@ package com.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -15,7 +16,9 @@ import android.widget.TextView;
 public class Workout extends AppCompatActivity {
     private TextView stageLabel;
     private Button startButton;
+    private Button skipButton;
     private TextView countdownText;
+    private TextView currentRoundText;
     private ProgressBar progressBar;
     private CountDownTimer countdownTimer;
 
@@ -27,14 +30,18 @@ public class Workout extends AppCompatActivity {
     private long cooldown;
     private long currentTimer;
 
-    private int currentRound = 0;
+    private int currentStage = 0; // current stage ( stages > rounds )
+    private int currentRound = 0; // current displayed round
+
     private boolean isRunning = false;
+    private boolean soundPaused = false;
 
     MediaPlayer countdownSound;
 
     //private CountDownTimer countDownTimer;
     private long timeLeft;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +54,12 @@ public class Workout extends AppCompatActivity {
         getSetup();
 
         startButton = findViewById(R.id.startButton);
+        skipButton = findViewById(R.id.skipButton);
+        skipButton.setEnabled(false);
+
         countdownText = findViewById(R.id.countdownText);
+        currentRoundText = findViewById(R.id.currentRoundText);
+        currentRoundText.setText("Round: " + currentRound + "/" + rounds);
 
         stageLabel = findViewById(R.id.stageLabel);
         stageLabel.setText(R.string.warmup);
@@ -59,8 +71,17 @@ public class Workout extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startStop();
+                skipButton.setEnabled(true);
             }
         });
+
+        skipButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                skipStage();
+            }
+        });
+
         updateTimer();
     }
 
@@ -103,20 +124,21 @@ public class Workout extends AppCompatActivity {
 
                 @Override
                 public void onFinish() {
-                    currentRound++;
-                    if(currentRound < rounds * 2) {
+                    currentStage++;
+                    if(currentStage < rounds * 2) {
                         currentTimer = getNewSetting();
                         startTimer(currentTimer);
                     }
-                    if (currentRound == rounds * 2){
+                    if (currentStage == rounds * 2){
                         stageLabel.setText(R.string.cooldown);
                         currentTimer = cooldown;
                         startTimer(currentTimer);
                     }
-                    if (currentRound > rounds * 2){
+                    if (currentStage > rounds * 2){
                         stageLabel.setText(R.string.finished);
                         getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-                        currentRound = 0;
+                        currentStage = 0;
+                        skipButton.setEnabled(false);
                     }
                     this.cancel();
                 }
@@ -126,7 +148,8 @@ public class Workout extends AppCompatActivity {
         }
 
         public long getNewSetting(){
-            if (currentRound % 2 != 0) {
+            if (currentStage % 2 != 0) {
+                increment_displayed_round();
                 stageLabel.setText(R.string.exercise);
                 return interval;
             } else {
@@ -150,6 +173,19 @@ public class Workout extends AppCompatActivity {
             timeLeftText += seconds;
             countdownText.setText(timeLeftText);
         }
+        
+        public void skipStage(){
+            countdownTimer.onFinish();
+            if (countdownSound.isPlaying()){
+                countdownSound.stop();
+            }
+        }
+
+        @SuppressLint("SetTextI18n")
+        public void increment_displayed_round(){
+            currentRound++;
+            currentRoundText.setText("Round: " + currentRound + '/' + rounds);
+        }
 
         public void stopTimer(){
             isRunning = false;
@@ -160,8 +196,16 @@ public class Workout extends AppCompatActivity {
         public void startStop(){
             if(isRunning){
                 stopTimer();
+                if (countdownSound.isPlaying()){
+                    countdownSound.pause();
+                    soundPaused = true;
+                }
             }else{
                 startTimer(timeLeft);
+                if(soundPaused){
+                    soundPaused = false;
+                    countdownSound.start();
+                }
             }
         }
 
