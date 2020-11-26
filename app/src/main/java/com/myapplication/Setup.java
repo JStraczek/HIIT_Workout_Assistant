@@ -11,6 +11,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/*
+TODO:
+- function that calculates time it takes to complete an exercise
+- com.myapplication.Exercise class that will enable creating multiple exercises
+ */
+
 public class Setup extends AppCompatActivity implements View.OnClickListener {
     private Button setButton;
     private Button resetButton;
