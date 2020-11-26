@@ -14,7 +14,7 @@ import android.widget.Toast;
 /*
 TODO:
 - function that calculates time it takes to complete an exercise
-- com.myapplication.Exercise class that will enable creating multiple exercises
+- com.myapplication.classes.Exercise class that will enable creating multiple exercises
  */
 
 public class Setup extends AppCompatActivity implements View.OnClickListener {
@@ -81,7 +81,7 @@ public class Setup extends AppCompatActivity implements View.OnClickListener {
         cooldownButton_decrease.setOnClickListener(this);
 
         //loading saved prefs (or not if there are none :))
-        load_previous_settings();
+        loadPreviousSettings();
     }
 
     @Override
@@ -215,7 +215,7 @@ public class Setup extends AppCompatActivity implements View.OnClickListener {
         Toast.makeText(this, R.string.settings_saved, Toast.LENGTH_SHORT).show();
     }
 
-    public void load_previous_settings(){
+    public void loadPreviousSettings(){
         SharedPreferences previousSettings = getSharedPreferences(PREVIOUS_SETTINGS, MODE_PRIVATE);
         roundsInput.setText(previousSettings.getString("Rounds", "0"));
         warmupInput.setText(previousSettings.getString("Warmup", "0"));

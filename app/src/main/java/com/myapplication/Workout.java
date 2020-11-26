@@ -12,7 +12,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-//import com.myapplication.Exercise;
+//import com.myapplication.classes.Exercise;
 
 public class Workout extends AppCompatActivity {
     private TextView stageLabel;

@@ -6,8 +6,7 @@
         android:largeScreens="true"
         android:normalScreens="true"
         android:smallScreens="true"
-        android:xlargeScreens="true"
-        />
+        android:xlargeScreens="true" />
 
     <application
         android:allowBackup="true"
@@ -16,6 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".NewSetup"
+            android:exported="true" />
         <activity android:name=".Workout" />
         <activity android:name=".Setup" />
         <activity android:name=".Menu">
